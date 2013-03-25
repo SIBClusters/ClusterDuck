@@ -1,11 +1,4 @@
 ClusterDuck::Application.routes.draw do
-  
-  root :to => "feeds#show"
-
-  resource :feed, only:[:show]
-
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
