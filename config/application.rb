@@ -11,6 +11,13 @@ end
 
 module ClusterDuck
   class Application < Rails::Application
+
+    config.twitterKeys = {
+        consumer_key:        ENV["twitter_consumer_key"],
+        consumer_secret:     ENV["twitter_consumer_secret"],
+        oauth_token:         ENV["twitter_oauth_token"],
+        oauth_token_secret:  ENV["twitter_oauth_token_secret"] 
+    }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
