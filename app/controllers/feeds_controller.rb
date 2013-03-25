@@ -10,4 +10,9 @@ class FeedsController < ApplicationController
   	# end
   
   end
+
+  def create
+    @feed
+  end
+
 end

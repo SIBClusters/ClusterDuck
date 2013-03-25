@@ -1,0 +1,2 @@
+class SocialNetworkConfigsController < ApplicationController
+end
