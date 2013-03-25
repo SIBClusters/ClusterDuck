@@ -1,0 +1,14 @@
+<h1>Scluster (Show action)</h1>
+
+
+
+<ul>
+
+
+  <% @group_feed.each  do |tweet| %>
+    <li><%= "#{tweet.user[:name]}: #{tweet.text}" %></li>
+  
+  <% end %>
+</ul>
+
+
