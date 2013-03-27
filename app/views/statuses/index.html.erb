@@ -1,16 +1,13 @@
-<%= Rails.application.config.twitterKeys[:consumer_key] %>
-
-<h1>Scluster (Show action)</h1>
-
-
+<h1>Status List</h1>
 
 <ul>
+  <% @all_tweets.each do |tweet| %>
 
 
-  <% @group_feed.each  do |tweet| %>
-    <li><%= "#{tweet.user[:name]}: #{tweet.text}" %></li>
-  
+   <li></li>
+   
   <% end %>
 </ul>
+ 
 
 

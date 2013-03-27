@@ -1,5 +1,7 @@
 ClusterDuck::Application.routes.draw do
+resources :statuses
 
+match "/api/update/:network" => "statuses#update"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
