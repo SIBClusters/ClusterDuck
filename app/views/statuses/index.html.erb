@@ -1,13 +1,9 @@
 <h1>Status List</h1>
-
 <ul>
-  <% @all_tweets.each do |tweet| %>
-
-
-   <li></li>
-   
-  <% end %>
+<% @statuses.each do |status| %>
+  <li><%= "(#{status[:status_created_at]}) - #{status[:post]}" %></li>
+<% end %>
 </ul>
- 
+
 
 
