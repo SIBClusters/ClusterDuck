@@ -1,13 +1,24 @@
 class StatusesController < ApplicationController
 
-  def index
-    users = ['technovangelist','germsvel','ccoughlin_']
-    @group_feed = []
-
-    users.each do |user|
-      timeline = Feed.get_twitter_timeline(user)
-      @group_feed += timeline     
+  def update
+    @network = params["network"]
+    if @network== "twitter"
+      users = ['technovangelist','germsvel','ccoughlin_']
+      Status.get_all_statuses_from_twitter(users)
     end
   end
 
+  def index
+    users = ['technovangelist','germsvel','ccoughlin_']
+    Status.get_all_statuses_from_twitter(users)
+    @statuses=Status.show_all_statuses
+  end
+
+  def clean
+    # (110..156).each do |num|
+    #   Status.delete_status(num)
+    # end
+    
+  end
+  
 end
