@@ -1,6 +1,8 @@
 ClusterDuck::Application.routes.draw do
 resources :statuses
 
+resources :social_network_configs
+
 match "/api/update/:network" => "statuses#update"
 match "/api/clean" => "statuses#clean"
 

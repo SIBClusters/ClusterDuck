@@ -1,3 +1,4 @@
 class SocialNetworkConfig < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :network_name
+  belongs_to :user
 end
