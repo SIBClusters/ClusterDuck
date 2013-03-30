@@ -22,18 +22,18 @@ class GroupsController < ApplicationController
 
   end
 
-  def edit
-    @group = Group.find(params[:id])
-  end
+  # def edit
+  #   @group = Group.find(params[:id])
+  # end
 
-  def update
-    @group = Group.find(:id)
+  # def update
+  #   @group = Group.find(:id)
 
-    if @group.update_attributes(params[:group])
-      flash[:notice] = "Group successfully updated"
-      redirect_to @groups
-    end
-  end
+  #   if @group.update_attributes(params[:group])
+  #     flash[:notice] = "Group successfully updated"
+  #     redirect_to @groups
+  #   end
+  # end
 
   def destroy
     Group.find(params[:id]).destroy

@@ -4,7 +4,7 @@ class Status < ActiveRecord::Base
   
 
   def self.get_twitter_timeline(username)
-    Twitter.user_timeline(username,{:count=>25})
+    Twitter.user_timeline(username,{:count=>50})
   end
 
   def self.save_status_to_database(user,body, creation_date)

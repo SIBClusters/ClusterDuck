@@ -1,9 +1,15 @@
 <h1>Status List</h1>
-<ul>
+<table class="table table-striped table-bordered table-condensed">
+<thead>
+  <tr><td>Date</td><td>Status</td></tr>
+</thead>
 <% @statuses.each do |status| %>
-  <li><%= "(#{status[:status_created_at]}) - #{status[:post]}" %></li>
+<tr>
+  <td><%= status[:status_created_at]%></td>
+  <td><%= status[:post] %></td>
+</tr>
 <% end %>
-</ul>
+</table>
 
 
 

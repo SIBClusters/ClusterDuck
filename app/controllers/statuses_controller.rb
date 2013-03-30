@@ -9,7 +9,7 @@ class StatusesController < ApplicationController
   end
 
   def index
-    users = ['technovangelist','germsvel','ccoughlin_']
+    users = ['technovangelist','germsvel','ccoughlin_', 'Ajaydhesikan']
     Status.get_all_statuses_from_twitter(users)
     @statuses=Status.show_all_statuses
   end
