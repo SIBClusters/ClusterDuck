@@ -1,8 +1,22 @@
 <h1>This is the index page for Groups</h1>
 
+
+<%= link_to 'Create Group', new_group_path, :class => 'btn' %>
+
+<table>
+  <tr>
+    <th>Group Name</th>
+    <th colspan=2>Actions</th>
+  </tr>
 <% @groups.each do |group| %>
-<ul>
-  <li><%= group.name %></li>
-</ul>
+  <tr>
+    <td><%= group.name %></td>  
+    <td><%= link_to 'Edit', edit_group_path(group) %></td>
+    <td><%= link_to 'Delete', group, :confirm => 'Are you sure?',
+                                     :method => :delete %></td>
+  </tr>
 
 <% end %>
+
+
+</table>

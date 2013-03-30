@@ -1,1 +1,10 @@
 <h1>This is the new page for Groups</h1>
+
+<%= form_for @group do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit 'Create' %>
+
+<% end %>
