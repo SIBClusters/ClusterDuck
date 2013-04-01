@@ -12,5 +12,4 @@ match "/api/clean" => "statuses#clean"
 
   resources :users, :except => :destroy
 
-
 end
