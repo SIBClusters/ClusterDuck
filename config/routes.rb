@@ -10,6 +10,6 @@ match "/api/clean" => "statuses#clean"
 
   resources :groups, :except => [:edit, :show, :update]
 
-  resources :users, :except => :destroy
+  resources :users, :only => [:show]
 
 end
