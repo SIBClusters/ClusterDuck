@@ -1,5 +1,7 @@
 class StatusesController < ApplicationController
 
+  layout 'main'
+
   def update
     @network = params["network"]
     if @network== "twitter"
