@@ -10,8 +10,14 @@ class User < ActiveRecord::Base
                   :first_name, :last_name, :username
   # attr_accessible :title, :body
 
-  #has_many :members
-  #has_many :groups, :through => :members
+  has_many :members
+  has_many :groups, :through => :members
+
+
+
+  def name 
+    "#{first_name} #{last_name}"
+  end
 
   
 
