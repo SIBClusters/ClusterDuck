@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-
   
+before_filter :authenticate_user!
 
   def show
     # user looking at his account. All other account actions

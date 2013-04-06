@@ -1,6 +1,6 @@
 <h3>Welcome to Cluster Duck <%= @user.name %></h3>
 
-<%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'btn pull-right' %>
+<%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'sign-out-btn btn pull-right' %>
 
 <table>
   <tr>
@@ -17,3 +17,8 @@
   </tr>
 
 </table>
+
+
+<div id="user-actions" class="btn-group">
+  <%= link_to 'Edit Account', edit_user_registration_path(user_session), :class => 'btn' %>
+</div>
