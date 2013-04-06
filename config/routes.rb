@@ -9,7 +9,7 @@ match "/api/clean" => "statuses#clean"
   devise_for :users
 
   resources :groups, :except => [:edit, :show, :update] do
-    resources :members
+    resources :members, :except => [:edit, :update]
   end
 
   resources :users, :only => [:show]
