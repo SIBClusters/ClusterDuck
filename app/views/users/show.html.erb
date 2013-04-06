@@ -1,0 +1,19 @@
+<h3>Welcome to Cluster Duck <%= @user.name %></h3>
+
+<%= link_to 'Sign out', destroy_user_session_path, :method => :delete, :class => 'btn pull-right' %>
+
+<table>
+  <tr>
+    <th>User Id: </th>
+    <td><%= @user.id %></td>
+  </tr>
+  <tr>
+    <th>Name: </th>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <th>Email: </th>
+    <td><%= @user.email %></td>
+  </tr>
+
+</table>
