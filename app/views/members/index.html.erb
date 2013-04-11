@@ -1,0 +1,33 @@
+<h2>This is the index page for members of <%= @group.name %></h2>
+
+<% if !flash[:notice].blank? %>
+  <div class="flash-notice well">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
+
+<div class="container">
+  <div class="span3">
+    <h3>Member list</h3>
+      <ul>
+        <% @members.each do |member| %>
+        <li><%= member.user_id %></li>
+        <% end %>
+      </ul>
+
+
+    <%= button_to "Become a member", :action => "create" %>
+
+  </div>
+
+</div>
+
+
+
+
+
+<div>
+  <%#= #link_to 'Add Member', new_group_member_path(@group), :class => 'btn' %>
+</div>
+
+

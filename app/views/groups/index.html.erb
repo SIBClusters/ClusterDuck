@@ -9,7 +9,7 @@
   </tr>
 <% @groups.each do |group| %>
   <tr>
-    <td><%= group.name %></td>  
+    <td><%= link_to group.name, group_members_path(group) %></td>  
     <td><%= link_to 'Delete', group, :confirm => 'Are you sure?',
                                      :method => :delete %></td>
   </tr>
