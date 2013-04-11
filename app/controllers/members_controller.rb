@@ -5,8 +5,7 @@ class MembersController < ApplicationController
 
   def index
     @group = Group.find(params[:group_id])
-    @members = @group.members.all
-    @users = User.all
+    @members = @group.users.all
   end
 
   def new
