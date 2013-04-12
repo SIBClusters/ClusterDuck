@@ -1,6 +1,5 @@
 class MembersController < ApplicationController
 
-
   layout 'main'
 
   def index

@@ -1,4 +1,4 @@
-<h2>This is the index page for members of <%= @group.name %></h2>
+<h2 id="group-name">Welcome to <%= @group.name %>!</h2>
 
 <% if !flash[:notice].blank? %>
   <div class="flash-notice well">
@@ -9,17 +9,13 @@
 <div class="container">
   <div class="span3">
     <h3>Member list</h3>
+    <%= button_to "Become a member", :action => "create" %>
       <ul>
         <% @members.each do |member| %>
         <li><%= member.name %></li>
         <% end %>
       </ul>
-
-
-    <%= button_to "Become a member", :action => "create" %>
-
   </div>
-
 </div>
 
 
