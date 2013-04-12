@@ -2,6 +2,8 @@ class StatusesController < ApplicationController
 
   layout 'main'
 
+  before_filter :authenticate_user!
+  
   def update
     @network = params["network"]
     if @network== "twitter"
